@@ -1,8 +1,10 @@
 #include <iostream>
+#define Size1 2
+#define Size2 2
 
 using namespace std;
 
-void fastestWay(int a[][], int t[][], int e[], int x[], int n){
+void fastestWay(int a[][Size1], int t[][Size2], int e[], int x[], int n){
     int F1[n], F2[n], f;
     
     F1[0] = e[0] + a[0][0];
@@ -29,12 +31,12 @@ void fastestWay(int a[][], int t[][], int e[], int x[], int n){
             //Posición???
         }
         
-        if(F1[n-1]+x[0] <= F2[n-1]+x[1]){
-            f = F1[n-1] + x[0];
-        }else{
-            f = F2[n-1] + x[1];
-        }
-        
+    }
+    
+    if(F1[n-1]+x[0] <= F2[n-1]+x[1]){
+        f = F1[n-1] + x[0];
+    }else{
+        f = F2[n-1] + x[1];
     }
     
     
